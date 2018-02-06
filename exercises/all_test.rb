@@ -15,22 +15,24 @@ class AllTest < Minitest::Test
   def test_not_all_zeros
     numbers = [0, 0, 0, 0, 1, 0, 0, 0]
     all_zeros = numbers.all? do |number|
-      # Your code goes here
+      number == 0
     end
     refute all_zeros
   end
 
   def test_all_gone
-    skip
     words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
-    # Your code goes here
+    all_gone = words.all? do |word|
+      word == "gone"
+    end
     assert all_gone
   end
 
   def test_not_all_gone
-    skip
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
-    # Your code goes here
+    all_gone = words.all? do |word|
+      word == "gone"
+    end
     refute all_gone
   end
 
