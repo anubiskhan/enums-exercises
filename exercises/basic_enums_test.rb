@@ -14,9 +14,7 @@ class BasicEnumsTest < Minitest::Test
   def test_simple_sum
     sum = 0
     numbers = [1, 2, 3, 4, 5]
-    numbers.each do |number|
-      sum += number
-    end
+    sum = numbers.sum
     assert_equal 15, sum
   end
 
